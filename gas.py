@@ -213,8 +213,7 @@ def main():
     global window
     paths = AppDataPaths('TGAdvertiserBOT DEMO')
     if not path.exists(paths.main_config_path):
-        window = sg.Window(title='TGAdvertiserBOT V1.7 CRACKED BY DZIU69', layout=credentials_layout, margins=(25,
-                                                                                                                            25))
+
         must_exit = False
         while 1:
             event, values = window.read()
