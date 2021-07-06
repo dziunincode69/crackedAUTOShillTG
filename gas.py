@@ -188,9 +188,6 @@ def startAds():
             break
 
 
-credentials_layout = [
- [
-  sg.Text('TGAdvertiserBOT Cracked Version \nCracked By DZIU69.')]]
 def stopBotThread():
     botThread.join(timeout=2)
     if botThread.is_alive():
