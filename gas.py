@@ -1,6 +1,13 @@
-# !/usr/bin/python
-# coding=utf-8
+# uncompyle6 version 3.7.4
+# Python bytecode 3.7 (3394)
+# Decompiled from: Python 2.7.18 (v2.7.18:8d21aa21f2, Apr 20 2020, 13:25:05) [MSC v.1500 64 bit (AMD64)]
+# Warning: this version of Python has problems handling the Python 3 "byte" type in constants properly.
 
+# Embedded file name: main.py
+# Compiled at: 1995-09-27 23:18:56
+# Size of source mod 2**32: 272 bytes
+from json import encoder
+from typing import Container
 import PySimpleGUI as sg
 from PySimpleGUI.PySimpleGUI import HorizontalSeparator
 import pyautogui, time, json, threading
@@ -8,10 +15,8 @@ from datetime import datetime
 from os import path
 from appdata import AppDataPaths
 import pyperclip, requests
-import sys
 from win32gui import GetWindowText, GetForegroundWindow
 import emoji, surrogates, sched
-
 
 pyautogui.FAILSAFE = False
 config_file_path = 'configs.json'
@@ -75,11 +80,11 @@ def changeChat(username):
     pyautogui.hotkey('ctrl', 'a')
     pyautogui.press('del')
 
-with open('text.txt') as f:
-    textt = f.read()
+
 def typeShill():
-    pyperclip.copy(textt)
+    pyperclip.copy('CRACKED BY @dziu69')
     pyautogui.hotkey('ctrl', 'v')
+
 
 first_col = [
  [
@@ -89,10 +94,10 @@ first_col = [
  [
   sg.Text('Text to advertise (You can copy & paste a message)')],
  [
-  sg.Multiline(size=(60, 11), font=('Courier', 10), key='-TEXT-', default_text=textt, disabled=True)],
+  sg.Multiline(size=(60, 11), font=('Courier', 10), key='-TEXT-', default_text='This is a DEMO for TGAdvertiserBOT by @vobruno', disabled=True)],
  [
   sg.Text(' Relative image path: '),
-  sg.In(size=(40, 1), font=('Courier', 10), key='-IMAGEPATH-', default_text='image.jpg', disabled=False)],
+  sg.In(size=(40, 1), font=('Courier', 10), key='-IMAGEPATH-', default_text='Not available in demo', disabled=True)],
  [
   sg.Column([
    [
@@ -107,7 +112,7 @@ first_col = [
  [
   sg.HorizontalSeparator(pad=(10, 20))],
  [
-  sg.Button('START'), sg.Button('STOP', disabled=True), sg.Text(' Contact me: dziunincode69@gmail.com')]]
+  sg.Button('START'), sg.Button('STOP', disabled=True), sg.Text('Official website: TgAdvertiserBot.com')]]
 second_col = [
  [
   sg.Output(size=(50, 27), font=('Courier', 10), key='-STATUS-')]]
@@ -188,6 +193,16 @@ def startAds():
             break
 
 
+credentials_layout = [
+ [
+  sg.Text('CRACKED BY @dziu69')],
+ [
+  sg.Text('Please enter your licence (case sensitive)')],
+ [
+  sg.In(key='-LICENCE-')],
+ [
+  sg.Button('VERIFY')]]
+
 def stopBotThread():
     botThread.join(timeout=2)
     if botThread.is_alive():
@@ -213,7 +228,8 @@ def main():
     global window
     paths = AppDataPaths('TGAdvertiserBOT DEMO')
     if not path.exists(paths.main_config_path):
-
+        window = sg.Window(title='CRACKED BY @dziu69', layout=credentials_layout, margins=(25,
+                                                                                                                            25))
         must_exit = False
         while 1:
             event, values = window.read()
@@ -221,7 +237,7 @@ def main():
                 if event == sg.WIN_CLOSED:
                     must_exit = True
                     break
-                if event != 'VERIFY':
+                if event == 'VERIFY':
                     datas = {'licence': values['-LICENCE-']}
                     url = 'https://tgadvertiserbot.com/validate_demo.php'
                     try:
@@ -229,7 +245,8 @@ def main():
                         response = requests.post(url, datas)
                         response_json = response.json()
                         if response_json['status'] == 'error':
-                            sg.Popup(response_json['msg'])
+                            paths.setup(verbose=False)
+                            
                         else:
                             if response_json['status'] == 'ok':
                                 paths.setup(verbose=False)
@@ -244,7 +261,7 @@ def main():
 
         if must_exit:
             return
-    window = sg.Window(title='TGAdvertiserBOT V1.7 Cracked by DZIU69', layout=layout, margins=(25,
+    window = sg.Window(title='CRACKED BY @dziu69', layout=layout, margins=(25,
                                                                                                             25))
     while 1:
         event, values = window.read()
@@ -299,3 +316,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+# okay decompiling main.pyc
