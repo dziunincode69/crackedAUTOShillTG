@@ -1,4 +1,5 @@
-#Cracked by dziu69
+# dziu69
+
 from json import encoder
 from typing import Container
 import PySimpleGUI as sg
@@ -74,8 +75,10 @@ def changeChat(username):
     pyautogui.press('del')
 
 
+with open('text.txt') as f:
+    textt = f.read()
 def typeShill():
-    pyperclip.copy('CRACKED BY @dziu69')
+    pyperclip.copy(textt)
     pyautogui.hotkey('ctrl', 'v')
 
 
@@ -190,7 +193,7 @@ credentials_layout = [
  [
   sg.Text('CRACKED BY @dziu69')],
  [
-  sg.Text('Please enter your licence (case sensitive)')],
+  sg.Text('Enter Anything')],
  [
   sg.In(key='-LICENCE-')],
  [
