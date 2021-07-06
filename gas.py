@@ -1,11 +1,4 @@
-# uncompyle6 version 3.7.4
-# Python bytecode 3.7 (3394)
-# Decompiled from: Python 2.7.18 (v2.7.18:8d21aa21f2, Apr 20 2020, 13:25:05) [MSC v.1500 64 bit (AMD64)]
-# Warning: this version of Python has problems handling the Python 3 "byte" type in constants properly.
-
-# Embedded file name: main.py
-# Compiled at: 1995-09-27 23:18:56
-# Size of source mod 2**32: 272 bytes
+#Cracked by dziu69
 from json import encoder
 from typing import Container
 import PySimpleGUI as sg
